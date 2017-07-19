@@ -7,10 +7,12 @@
  <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"
    integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA=="
    crossorigin=""></script>
+  <div id="mapid"></div>
+ #mapid { height: 180px; }
 </head> 
 <body>
- <div id="mapid"></div>
- #mapid { height: 180px; }
+var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+ 
 
 </body>
 </html>
