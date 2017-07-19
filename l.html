@@ -1,3 +1,4 @@
+<!DOCTYPE
 <html>
 <head>
   <title>A Leaflet map!</title>
@@ -16,17 +17,29 @@
   <div id="map"></div>
 
   <script>
-
+var geojsonFeature = {"type": "Feature",
+    "properties": {
+        "name": "Alabama",
+        "density": 94.65
+    },
+    "geometry": ...
+    ...
+}
   // initialize the map
   var map = L.map('map').setView([42.35, -71.08], 13);
 
   // load a tile layer
- L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1IjoicmFjaGVsaHVudGVyMjAwMSIsImEiOiJjajViYWRyMnUwaHpwMnFxaDIwNXUzMDBsIn0.rk869kZyJlVt2Z8NbFv-qg'
-}).addTo(mymap);
+var mapboxAccessToken = {sk.eyJ1IjoicmFjaGVsaHVudGVyMjAwMSIsImEiOiJjajViZmpjNzgwamltMndvN3RqNjB5amUyIn0.eE-UPu7zt1RXepRNQ4Ci7g};
+var map = L.map('map').setView([37.8, -96], 4);
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + mapboxAccessToken, {
+    id: 'mapbox.light',
+    attribution: ...
+}).addTo(map);
+
+L.geoJson(statesData).addTo(map);
+
+L.geoJson(statesData).addTo(map);
   </script>
 </body>
 </html>
